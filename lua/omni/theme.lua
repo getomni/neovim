@@ -6,7 +6,7 @@ local theme = {}
 theme.colors = c
 
 theme.base = {
-  Comment = { fg = c.comment, style = "italic" }, -- any comment
+  Comment = { fg = c.comment }, -- any comment
   ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
   Conceal = { fg = c.bg_dark }, -- placeholder characters substituted for concealed text (see 'conceallevel')
   Cursor = { fg = c.bg, bg = c.bg }, -- character under the cursor
@@ -88,7 +88,7 @@ theme.base = {
   -- Repeat        = { }, --   for, do, while, etc.
   -- Label         = { }, --    case, default, etc.
   Operator = { fg = c.pink }, -- "sizeof", "+", "*", etc.
-  Keyword = { fg = c.pink, style = "italic" }, --  any other keyword
+  Keyword = { fg = c.pink }, --  any other keyword
   -- Exception     = { }, --  try, catch, throw
 
   PreProc = { fg = c.fg }, -- (preferred) generic Preprocessor
@@ -211,7 +211,7 @@ theme.plugins = {
   -- TSFuncBuiltin = {  }, -- For builtin functions: `table.insert` in Lua.
   -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
   TSInclude = { fg = c.pink }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-  TSKeyword = { fg = c.pink, style = "italic" }, -- For keywords that don't fall in previous categories.
+  TSKeyword = { fg = c.pink }, -- For keywords that don't fall in previous categories.
   TSKeywordFunction = { fg = c.pink }, -- For keywords used to define a fuction.
   TSLabel = { fg = c.purple }, -- For labels: `label:` in C and `:label:` in Lua.
   -- TSMethod = { fg = c.green }, -- For method calls and definitions.
