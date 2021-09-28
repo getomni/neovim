@@ -151,7 +151,7 @@ theme.base = {
   LspReferenceWrite = { bg = c.selection }, -- used for highlighting "write" references
 
   LspDiagnosticsDefaultError = { fg = c.red }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
-  LspDiagnosticsDefaultWarning = { fg = c.orange }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
+  LspDiagnosticsDefaultWarning = { fg = c.yellow }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
   LspDiagnosticsDefaultInformation = { fg = c.cyan }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
   LspDiagnosticsDefaultHint = { fg = c.fg }, -- Used as the base highlight group. Other LspDiagnostic highlights link to this by default (except Underline)
 
