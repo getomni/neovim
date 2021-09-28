@@ -9,13 +9,13 @@ Install the theme with your preferred package manager:
 [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use 'joaom00/neovim'
+use 'getomni/neovim'
 ```
 
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'joaom00/neovim', { 'branch': 'main' }
+Plug 'getomni/neovim', { 'branch': 'main' }
 ```
 
 ## 🚀 Usage
