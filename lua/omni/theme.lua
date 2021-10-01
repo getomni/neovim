@@ -15,10 +15,10 @@ theme.base = {
   CursorColumn = { bg = c.bg_lighter }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
   CursorLine = { bg = c.bg_lighter }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
   Directory = { fg = c.fg }, -- directory names (and other special names in listings)
-  DiffAdd = { bg = util.darken(c.git.add, 0.2) }, -- diff mode: Added line |diff.txt|
-  DiffChange = { bg = util.darken(c.git.change, 0.2) }, -- diff mode: Changed line |diff.txt|
-  DiffDelete = { bg = util.darken(c.git.delete, 0.2) }, -- diff mode: Deleted line |diff.txt|
-  DiffText = { bg = util.darken(c.git.change, 0.2) }, -- diff mode: Changed text within a changed line |diff.txt|
+  DiffAdd = { bg = util.darken(c.git.add, 0.4) }, -- diff mode: Added line |diff.txt|
+  DiffChange = { bg = util.darken(c.git.change, 0.4) }, -- diff mode: Changed line |diff.txt|
+  DiffDelete = { bg = util.darken(c.git.delete, 0.4) }, -- diff mode: Deleted line |diff.txt|
+  DiffText = { bg = util.darken(c.git.change, 0.4) }, -- diff mode: Changed text within a changed line |diff.txt|
   EndOfBuffer = { fg = c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
   -- TermCursor  = { }, -- cursor in a focused terminal
   -- TermCursorNC= { }, -- cursor in an unfocused terminal
