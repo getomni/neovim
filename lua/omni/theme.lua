@@ -24,8 +24,8 @@ theme.base = {
   -- TermCursorNC= { }, -- cursor in an unfocused terminal
   ErrorMsg = { fg = c.red }, -- error messages on the command line
   VertSplit = { fg = c.pink }, -- the column separating vertically split windows
-  Folded = { fg = c.cyan, bg = c.fg }, -- line used for closed folds
-  FoldColumn = { bg = c.bg, fg = c.comment }, -- 'foldcolumn'
+  Folded = { fg = c.pink, bg = c.bg_lighter }, -- line used for closed folds
+  FoldColumn = { bg = c.bg_lighter, fg = c.purple }, -- 'foldcolumn'
   SignColumn = { bg = c.bg, fg = c.fg }, -- column where |signs| are displayed
   SignColumnSB = { bg = c.bg_darker, fg = c.fg }, -- column where |signs| are displayed
   Substitute = { bg = c.purple, fg = c.black }, -- |:substitute| replacement text highlighting
