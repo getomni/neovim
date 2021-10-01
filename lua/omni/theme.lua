@@ -7,7 +7,7 @@ theme.colors = c
 
 theme.base = {
   Comment = { fg = c.comment }, -- any comment
-  ColorColumn = { bg = c.black }, -- used for the columns set with 'colorcolumn'
+  ColorColumn = { bg = c.bg_darker }, -- used for the columns set with 'colorcolumn'
   Conceal = { fg = c.bg_dark }, -- placeholder characters substituted for concealed text (see 'conceallevel')
   Cursor = { fg = c.bg, bg = c.bg }, -- character under the cursor
   lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
@@ -18,7 +18,7 @@ theme.base = {
   DiffAdd = { bg = util.darken(c.git.add, 0.4) }, -- diff mode: Added line |diff.txt|
   DiffChange = { bg = util.darken(c.git.change, 0.4) }, -- diff mode: Changed line |diff.txt|
   DiffDelete = { bg = util.darken(c.git.delete, 0.4) }, -- diff mode: Deleted line |diff.txt|
-  DiffText = { bg = util.darken(c.git.change, 0.4) }, -- diff mode: Changed text within a changed line |diff.txt|
+  DiffText = { bg = util.darken(c.git.change, 0.2) }, -- diff mode: Changed text within a changed line |diff.txt|
   EndOfBuffer = { fg = c.bg }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
   -- TermCursor  = { }, -- cursor in a focused terminal
   -- TermCursorNC= { }, -- cursor in an unfocused terminal
@@ -28,7 +28,7 @@ theme.base = {
   FoldColumn = { bg = c.bg_lighter, fg = c.purple }, -- 'foldcolumn'
   SignColumn = { bg = c.bg, fg = c.fg }, -- column where |signs| are displayed
   SignColumnSB = { bg = c.bg_darker, fg = c.fg }, -- column where |signs| are displayed
-  Substitute = { bg = c.purple, fg = c.black }, -- |:substitute| replacement text highlighting
+  Substitute = { bg = c.purple, fg = c.bg_darker }, -- |:substitute| replacement text highlighting
   LineNr = { fg = c.purple }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
   CursorLineNr = { fg = c.pink }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
   MatchParen = { fg = c.orange, style = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -36,7 +36,7 @@ theme.base = {
   MsgArea = { fg = c.fg }, -- Area for messages and cmdline
   -- MsgSeparator= { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
   MoreMsg = { fg = c.fg }, -- |more-prompt|
-  NonText = { fg = c.bg_dark }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+  NonText = { fg = c.orange }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
   Normal = { fg = c.fg, bg = c.bg }, -- normal text
   NormalNC = { fg = c.fg, bg = c.bg }, -- normal text in non-current windows
   NormalSB = { fg = c.bg_darker, bg = c.bg_dark }, -- normal text in non-current windows
@@ -49,7 +49,7 @@ theme.base = {
   Question = { fg = c.cyan }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bg = c.bg, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
   Search = { bg = c.bg, fg = c.cyan }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-  IncSearch = { bg = c.cyan, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+  IncSearch = { bg = c.orange, fg = c.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
   SpecialKey = { fg = c.bg }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
   SpellBad = { sp = c.red, style = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
   SpellCap = { sp = c.orange, style = "undercurl" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -58,8 +58,8 @@ theme.base = {
   StatusLine = { fg = c.bg_darker, bg = c.bg }, -- status line of current window
   StatusLineNC = { fg = c.fg, bg = c.bg }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   TabLine = { bg = c.bg, fg = c.fg }, -- tab pages line, not active tab page label
-  TabLineFill = { bg = c.black }, -- tab pages line, where there are no labels
-  TabLineSel = { fg = c.black, bg = c.cyan }, -- tab pages line, active tab page label
+  TabLineFill = { bg = c.bg_darker }, -- tab pages line, where there are no labels
+  TabLineSel = { fg = c.bg_darker, bg = c.cyan }, -- tab pages line, active tab page label
   Title = { fg = c.cyan, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
   Visual = { bg = c.selection }, -- Visual mode selection
   VisualNOS = { bg = c.bg }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -76,7 +76,7 @@ theme.base = {
   Constant = { fg = c.green }, -- (preferred) any constant
   String = { fg = c.yellow }, --   a string constant: "this is a string"
   Character = { fg = c.green }, --  a character constant: 'c', '\n'
-  -- Number        = { }, --   a number constant: 234, 0xff
+  Number = { fg = c.cyan }, --   a number constant: 234, 0xff
   Boolean = { fg = c.cyan }, --  a boolean constant: TRUE, false
   -- Float         = { }, --    a floating point constant: 2.3e10
 
@@ -127,7 +127,7 @@ theme.base = {
 
   -- mkdHeading = { fg = c.orange, style = "bold" },
   -- mkdCode = { bg = c.terminal_black, fg = c.fg },
-  mkdCodeDelimiter = { bg = c.black, fg = c.fg },
+  mkdCodeDelimiter = { bg = c.bg_darker, fg = c.fg },
   mkdCodeStart = { fg = c.fg, style = "bold" },
   mkdCodeEnd = { fg = c.fg, style = "bold" },
   mkdLink = { fg = c.purple, style = "underline" },
@@ -165,7 +165,7 @@ theme.base = {
   LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = c.cyan }, -- Used to underline "Information" diagnostics
   LspDiagnosticsUnderlineHint = { style = "undercurl", sp = c.purple }, -- Used to underline "Hint" diagnostics
 
-  LspSignatureActiveParameter = { fg = c.orange },
+  LspSignatureActiveParameter = { bg = c.pink },
   LspCodeLens = { fg = c.comment },
 
   -- LspDiagnosticsFloatingError         = { }, -- Used to color "Error" diagnostic messages in diagnostics float
@@ -403,7 +403,6 @@ theme.plugins = {
 
   -- Headlines
   Headline1 = { bg = util.darken(c.cyan, 0.2) },
-  Headline2 = { bg = util.darken(c.cyan, 0.2) },
   CodeBlock = { bg = c.bg_darker },
 
   LightspeedGreyWash = { fg = c.bg_dark },
