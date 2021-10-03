@@ -1,4 +1,4 @@
-local hsluv = require "tokyonight.hsluv"
+local hsluv = require "omni.hsluv"
 
 local util = {}
 
