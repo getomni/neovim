@@ -47,7 +47,7 @@ theme.base = {
   PmenuSbar = { bg = c.bg_light }, -- Popup menu: scrollbar.
   PmenuThumb = { bg = c.purple }, -- Popup menu: Thumb of the scrollbar.
   Question = { fg = c.cyan }, -- |hit-enter| prompt and yes/no questions
-  QuickFixLine = { bg = c.bg, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+  QuickFixLine = { bg = c.selection, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
   Search = { bg = c.bg, fg = c.cyan }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
   IncSearch = { bg = c.orange, fg = c.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
   SpecialKey = { fg = c.bg }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
@@ -119,7 +119,7 @@ theme.base = {
   Error = { fg = c.red }, -- (preferred) any erroneous construct
   Todo = { bg = c.cyan, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
-  qfLineNr = { fg = c.bg_darker },
+  qfLineNr = { fg = c.purple },
   qfFileName = { fg = c.cyan },
 
   htmlH1 = { fg = c.purple, style = "bold" },
@@ -249,11 +249,10 @@ theme.plugins = {
   -- Lua
   -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
 
-  -- TODO: check if the colors are ok
   -- LspTrouble
-  LspTroubleText = { fg = c.bg_dark },
-  LspTroubleCount = { fg = c.purple, bg = c.fg },
-  LspTroubleNormal = { fg = c.bg_darker, bg = c.bg_darker },
+  LspTroubleText = { fg = c.comment },
+  LspTroubleCount = { fg = c.bg_dark, bg = c.green },
+  LspTroubleNormal = { fg = c.fg, bg = c.bg_darker },
 
   -- Illuminate
   illuminatedWord = { bg = c.fg },
