@@ -9,7 +9,7 @@ theme.base = {
   Comment = { fg = c.comment }, -- any comment
   ColorColumn = { bg = c.bg_darker }, -- used for the columns set with 'colorcolumn'
   Conceal = { fg = c.bg_dark }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-  Cursor = { fg = c.bg, bg = c.bg }, -- character under the cursor
+  Cursor = { fg = c.fg, bg = c.fg }, -- character under the cursor
   lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
   CursorIM = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
   CursorColumn = { bg = c.bg_lighter }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
