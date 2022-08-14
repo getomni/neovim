@@ -49,7 +49,7 @@ theme.base = {
   Question = { fg = c.cyan }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bg = c.selection, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
   Search = { bg = c.bg, fg = c.cyan }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-  IncSearch = { bg = c.orange, fg = c.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+  IncSearch = { bg = c.orange, fg = c.bg }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
   SpecialKey = { fg = c.bg }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
   SpellBad = { sp = c.red, style = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
   SpellCap = { sp = c.orange, style = "undercurl" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -387,6 +387,7 @@ theme.plugins = {
   BufferInactiveTarget = { bg = c.bg, fg = c.red },
   BufferTabpages = { bg = c.bg, fg = c.fg },
   BufferTabpage = { bg = c.bg, fg = c.fg },
+  BufferOffset = { bg = c.bg, fg = c.fg },
 
   -- TODO: check if the colors are ok
   -- Sneak
