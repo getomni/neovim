@@ -61,7 +61,7 @@ theme.base = {
   TabLineFill = { bg = c.bg_darker }, -- tab pages line, where there are no labels
   TabLineSel = { fg = c.bg_darker, bg = c.cyan }, -- tab pages line, active tab page label
   Title = { fg = c.cyan, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
-  Visual = { bg = c.selection }, -- Visual mode selection
+  Visual = { bg = c.selection, reverse = true }, -- Visual mode selection
   VisualNOS = { bg = c.bg }, -- Visual mode selection when vim is "Not Owning the Selection".
   WarningMsg = { fg = c.orange }, -- warning messages
   Whitespace = { fg = c.selection }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -370,8 +370,8 @@ theme.plugins = {
 
   -- TODO: check if the colors are ok
   -- Barbar
-  BufferCurrent = { bg = c.fg, fg = c.fg },
-  BufferCurrentIndex = { bg = c.fg, fg = c.cyan },
+  BufferCurrent = { bg = c.bg, fg = c.fg },
+  BufferCurrentIndex = { bg = c.bg, fg = c.fg },
   BufferCurrentMod = { bg = c.fg, fg = c.orange },
   BufferCurrentSign = { bg = c.fg, fg = c.cyan },
   BufferCurrentTarget = { bg = c.fg, fg = c.red },
