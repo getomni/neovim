@@ -370,11 +370,11 @@ theme.plugins = {
 
   -- TODO: check if the colors are ok
   -- Barbar
-  BufferCurrent = { bg = c.bg, fg = c.fg },
+  BufferCurrent = { bg = c.bg, fg = c.purple },
   BufferCurrentIndex = { bg = c.bg, fg = c.fg },
-  BufferCurrentMod = { bg = c.fg, fg = c.orange },
-  BufferCurrentSign = { bg = c.fg, fg = c.cyan },
-  BufferCurrentTarget = { bg = c.fg, fg = c.red },
+  BufferCurrentMod = { bg = c.bg, fg = c.orange },
+  BufferCurrentSign = { bg = c.bg, fg = c.cyan },
+  BufferCurrentTarget = { bg = c.bg, fg = c.red },
   BufferVisible = { bg = c.bg, fg = c.fg },
   BufferVisibleIndex = { bg = c.bg, fg = c.cyan },
   BufferVisibleMod = { bg = c.bg, fg = c.orange },
