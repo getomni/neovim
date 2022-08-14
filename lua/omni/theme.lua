@@ -380,12 +380,12 @@ theme.plugins = {
   BufferVisibleMod = { bg = c.bg, fg = c.orange },
   BufferVisibleSign = { bg = c.bg, fg = c.cyan },
   BufferVisibleTarget = { bg = c.bg, fg = c.red },
-  BufferInactive = { bg = c.bg, fg = c.bg_dark },
-  BufferInactiveIndex = { bg = c.bg, fg = c.bg_dark },
+  BufferInactive = { bg = c.bg, fg = c.fg },
+  BufferInactiveIndex = { bg = c.bg, fg = c.fg },
   BufferInactiveMod = { bg = c.bg, fg = c.red },
   BufferInactiveSign = { bg = c.bg, fg = c.fg },
   BufferInactiveTarget = { bg = c.bg, fg = c.red },
-  BufferTabpages = { bg = c.bg, fg = c.none },
+  BufferTabpages = { bg = c.bg, fg = c.fg },
   BufferTabpage = { bg = c.bg, fg = c.fg },
 
   -- TODO: check if the colors are ok
