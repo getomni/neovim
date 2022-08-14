@@ -49,7 +49,7 @@ theme.base = {
   Question = { fg = c.cyan }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bg = c.selection, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
   Search = { bg = c.bg, fg = c.cyan }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-  IncSearch = { bg = c.orange, fg = c.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+  IncSearch = { bg = c.orange, fg = c.bg }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
   SpecialKey = { fg = c.bg }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
   SpellBad = { sp = c.red, style = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
   SpellCap = { sp = c.orange, style = "undercurl" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -61,7 +61,7 @@ theme.base = {
   TabLineFill = { bg = c.bg_darker }, -- tab pages line, where there are no labels
   TabLineSel = { fg = c.bg_darker, bg = c.cyan }, -- tab pages line, active tab page label
   Title = { fg = c.cyan, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
-  Visual = { bg = c.selection }, -- Visual mode selection
+  Visual = { bg = c.selection, reverse = true }, -- Visual mode selection
   VisualNOS = { bg = c.bg }, -- Visual mode selection when vim is "Not Owning the Selection".
   WarningMsg = { fg = c.orange }, -- warning messages
   Whitespace = { fg = c.selection }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -370,23 +370,24 @@ theme.plugins = {
 
   -- TODO: check if the colors are ok
   -- Barbar
-  BufferCurrent = { bg = c.fg, fg = c.fg },
-  BufferCurrentIndex = { bg = c.fg, fg = c.cyan },
-  BufferCurrentMod = { bg = c.fg, fg = c.orange },
-  BufferCurrentSign = { bg = c.fg, fg = c.cyan },
-  BufferCurrentTarget = { bg = c.fg, fg = c.red },
-  BufferVisible = { bg = c.bg, fg = c.fg },
+  BufferCurrent = { bg = c.bg, fg = c.purple },
+  BufferCurrentIndex = { bg = c.bg, fg = c.fg },
+  BufferCurrentMod = { bg = c.bg, fg = c.orange },
+  BufferCurrentSign = { bg = c.bg, fg = c.cyan },
+  BufferCurrentTarget = { bg = c.bg, fg = c.red },
+  BufferVisible = { bg = c.bg, fg = c.cyan },
   BufferVisibleIndex = { bg = c.bg, fg = c.cyan },
   BufferVisibleMod = { bg = c.bg, fg = c.orange },
   BufferVisibleSign = { bg = c.bg, fg = c.cyan },
   BufferVisibleTarget = { bg = c.bg, fg = c.red },
-  BufferInactive = { bg = c.bg, fg = c.bg_dark },
-  BufferInactiveIndex = { bg = c.bg, fg = c.bg_dark },
+  BufferInactive = { bg = c.bg, fg = c.cyan },
+  BufferInactiveIndex = { bg = c.bg, fg = c.fg },
   BufferInactiveMod = { bg = c.bg, fg = c.red },
   BufferInactiveSign = { bg = c.bg, fg = c.fg },
   BufferInactiveTarget = { bg = c.bg, fg = c.red },
-  BufferTabpages = { bg = c.bg, fg = c.none },
+  BufferTabpages = { bg = c.bg, fg = c.fg },
   BufferTabpage = { bg = c.bg, fg = c.fg },
+  BufferOffset = { bg = c.bg, fg = c.fg },
 
   -- TODO: check if the colors are ok
   -- Sneak
