@@ -387,7 +387,6 @@ theme.plugins = {
   BufferInactiveTarget = { bg = c.bg, fg = c.red },
   BufferTabpages = { bg = c.bg, fg = c.fg },
   BufferTabpage = { bg = c.bg, fg = c.fg },
-  BufferCurrentIcon = { link = theme.plugins.BufferCurrent },
 
   -- TODO: check if the colors are ok
   -- Sneak
